@@ -28,3 +28,4 @@ Keszte Márton felvételi feladata
 ## Futtatáshoz szükséges
 * composer install
 * A root a public mappa, entry point az index.php file
+* Az src mappán belül található config.php file-ban állíthatóak az adatbázis kapcsolódáshoz szükséges adatok.
