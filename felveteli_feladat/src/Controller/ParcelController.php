@@ -110,6 +110,16 @@ class ParcelController {
                 echo $e->getMessage();
                 exit;
             }
+
+
+            $sql = "SELECT * FROM users WHERE id='{$data['user_id']}'";
+            $result = mysqli_query($link,$sql);
+            $row = mysqli_fetch_array($result);
+            if($row == null){
+                http_response_code(400);
+                echo "User not found with the given id";
+                exit;
+            }
         //-----------create unique hexcode--------------//
             $unique = false;
             while(!$unique){
@@ -149,7 +159,7 @@ class ParcelController {
             http_response_code(200);
 
             closeDb($link);
-            
+
             $jsonData = json_encode($data);
             echo $jsonData;
             
