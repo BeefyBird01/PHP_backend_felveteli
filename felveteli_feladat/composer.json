@@ -1,0 +1,11 @@
+{
+    "name": "mkesz/felveteli_feladat",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "felveteli\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {}
+}
